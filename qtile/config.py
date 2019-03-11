@@ -201,9 +201,31 @@ def init_keys():
         # Lock the screen
 
         Key(
-                [mod, "shift"], "Delete",
+                [mod], "F6",
                 lazy.spawn("i3lock -e -f -c 1d2021 && pauseallmpv && mpc pause")
-                ),        
+                ),
+
+        #hibernate        
+
+        Key(
+                [mod], "F8",
+                lazy.spawn("systemctl suspend"),
+                lazy.spawn("i3lock -e -f -c 1d2021 && pauseallmpv && mpc pause")
+                ), 
+
+        #shutdown      
+
+        Key(
+                [mod], "F9",
+                lazy.spawn("shutdown -h now")
+                ),
+
+        #reboot        
+
+        Key(
+                [mod], "F11",
+                lazy.spawn("reboot")
+                ),                      
             # Apps Launched with <SUPER> + <KEYPAD 0-9> || I Removed It xD
         ]
     return keys
