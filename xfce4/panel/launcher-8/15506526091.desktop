@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=jd-gui
+Comment=
+Exec=/usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar /home/ebony/.cache/jd-gui-1.4.0.jar
+Icon=kali-jd-gui
+Path=
+Terminal=false
+StartupNotify=false

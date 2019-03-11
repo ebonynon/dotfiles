@@ -1,0 +1,14 @@
+show_frame=false
+fg_set=false
+bg_set=true
+timezone=
+width_set=false
+height_set=false
+lines_vertically=false
+rotation=0
+data0=%X %x
+font0=
+tooltip=%A %d %B %Y/%V
+hib_timing=false
+bg=11308R 10280G 9509B
+

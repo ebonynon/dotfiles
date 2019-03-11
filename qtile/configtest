@@ -1,0 +1,48 @@
+            Key(
+                [mod], "k",
+                lazy.layout.down()                        # Switch between windows in current stack pane
+                ),
+            Key(
+                [mod], "j",
+                lazy.layout.up()                          # Switch between windows in current stack pane
+                ),
+            Key(
+                [mod], "h",
+                lazy.layout.right()                        # Switch between windows in current stack pane
+                ),
+            Key(
+                [mod], "l",
+                lazy.layout.left()                          # Switch between windows in current stack pane
+                ),
+            Key(
+                [mod, "shift"], "k",
+                lazy.layout.shuffle_down()                # Move windows down in current stack
+                ),
+            Key(
+                [mod, "shift"], "j",
+                lazy.layout.shuffle_up()                  # Move windows up in current stack
+                ),
+            Key(
+                [mod, "shift"], "h",
+                lazy.layout.shuffle_left()                # Move windows down in current stack hhhhh
+                ),
+            Key(
+                [mod, "shift"], "l",
+                lazy.layout.shuffle_right()                  # Move windows up in current stack lllllll
+		),
+            Key(
+                [mod, "alt"], "h",
+                lazy.layout.grow_lef()                       # Grow size of current window (XmonadTall) rem
+                ),
+            Key(
+                [mod, "alt"], "l",
+                lazy.layout.grow_right()                     # Shrink size of current window (XmonadTall)
+                ),
+            Key(
+                [mod, "alt"], "j",
+                lazy.layout.grow_down()                       # Grow size of current window (XmonadTall)
+                ),
+            Key(
+                [mod, "alt"], "k",
+                lazy.layout.grow_up()                     # Shrink size of current window (XmonadTall) rem
+                ),

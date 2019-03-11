@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Android Studio
+Comment=
+Exec=/usr/local/android-studio/bin/studio.sh
+Icon=androidstudio
+Path=
+Terminal=false
+StartupNotify=false
