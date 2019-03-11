@@ -133,7 +133,7 @@ def init_keys():
             Key(
                 [mod, "shift"], "l",
                 lazy.layout.shuffle_right()                  # Move windows rigth in current stack 
-		),
+        ),
             Key(
                 [mod], "Left",
                 lazy.layout.grow(),                       # Grow size of current window (XmonadTall)
@@ -193,7 +193,7 @@ def init_keys():
                 [mod], "g",
                 lazy.spawn("geany")
                 ),
-	    Key(
+        Key(
                 [mod], "q",
                 lazy.spawn("rofi -show run")
                 ),
@@ -227,55 +227,55 @@ def init_colors():
 
 def init_group_names():
     return [("DEV", {
-		'layout': 'max',
-            	'matches': [Match(wm_class=['Leafpad',
-					    'Code',
-					    'Vim',
-					    'Gvim'
-						])],
-		    }),
+        'layout': 'max',
+                'matches': [Match(wm_class=['Leafpad',
+                        'Code',
+                        'Vim',
+                        'Gvim'
+                        ])],
+            }),
             ("WWW", {
-		'layout': 'max',
-            	'matches': [Match(wm_class=['Firefox',
-					    'Chromium',
-					    'Opera',
-					    'Surf'
-						])],
-		   }),
+        'layout': 'max',
+                'matches': [Match(wm_class=['Firefox',
+                        'Chromium',
+                        'Opera',
+                        'Surf'
+                        ])],
+           }),
             ("SYS", {
-		'layout': 'monadtall',
-            	'matches': [Match(wm_class=['Thunar'
-						])],
-		   }),
+        'layout': 'monadtall',
+                'matches': [Match(wm_class=['Thunar'
+                        ])],
+           }),
             ("DOC", {
-		'layout': 'monadtall',
-            	'matches': [Match(wm_class=['Okular'
-						])],
-		  }),
+        'layout': 'monadtall',
+                'matches': [Match(wm_class=['Okular'
+                        ])],
+          }),
             ("VBOX", {
-		'layout': 'floating',
-            	'matches': [Match(wm_class=['VirtualBox',
-					    'Vmware'
-						])],
-		  }),
+        'layout': 'floating',
+                'matches': [Match(wm_class=['VirtualBox',
+                        'Vmware'
+                        ])],
+          }),
             ("CHAT", {
-		'layout': 'bsp',
-            	'matches': [Match(wm_class=['Discord'
-						])],
-		 }),
+        'layout': 'bsp',
+                'matches': [Match(wm_class=['Discord'
+                        ])],
+         }),
             ("MEDIA", {
-		'layout': 'monadtall',
-            	'matches': [Match(wm_class=['Mpv',
-					    'Clementine',
-					    'Nomacs'
-						])],
-		 }),
+        'layout': 'monadtall',
+                'matches': [Match(wm_class=['Mpv',
+                        'Clementine',
+                        'Nomacs'
+                        ])],
+         }),
             ("GFX", {
-		'layout': 'floating',
-            	'matches': [Match(wm_class=['Gimp',
-					    'Kdenlive'
-						])],
-		})]
+        'layout': 'floating',
+                'matches': [Match(wm_class=['Gimp',
+                        'Kdenlive'
+                        ])],
+        })]
 
 def init_groups():
     return [Group(name, **kwargs) for name, kwargs in group_names]
@@ -377,29 +377,29 @@ def init_widgets_list():
                         padding=10,
                         foreground = colors[3],
                         background = colors[1]
-                        ),             
+                        ),            
                 widget.TextBox(
-                    "◢",
-                    fontsize=55,
-                    font='TerminessTTF Nerd Font',
-                    foreground="#ffffff",
-                    background = colors[0],
-                    padding=-2,
-                ),
+                        "◢",
+                        fontsize=55,
+                        font='TerminessTTF Nerd Font',
+                        foreground="#ffffff",
+                        background = colors[0],
+                        padding=-2,
+                        ),
                 widget.TextBox(
-                    "◤ ",
-                    fontsize=55,
-                    font='TerminessTTF Nerd Font',
-                    foreground="#ffffff",
-                    background = colors[0],
-                    padding=-5,
+                        "◤ ",
+                        fontsize=55,
+                        font='TerminessTTF Nerd Font',
+                        foreground="#ffffff",
+                        background = colors[0],
+                        padding=-5,
                 ),
                 widget.Prompt(
-                    fontsize=12,
-                    max_history=20,
-                    record_history=True,
-                    prompt='run: ',
-                    font='TerminessTTF Nerd Font',
+                        fontsize=12,
+                        max_history=20,
+                        record_history=True,
+                        prompt='run: ',
+                        font='TerminessTTF Nerd Font',
                 ),
                 widget.WindowName(font="Ubuntu",
                         fontsize = 11,
@@ -407,80 +407,86 @@ def init_widgets_list():
                         background = colors[0],
                         padding = 6
                         ),
-                widget.TextBox(
-                    "◢",
-                    fontsize=55,
-                    font='TerminessTTF Nerd Font',
-                    foreground="#ffffff",
-                    background = colors[0],
-                    padding=-2,
-                ),
-                widget.CurrentLayout(
-                    padding=0,
-                    fontsize=12,
-                    background="#ffffff",
-                    foreground="#282828",
-                    font='TerminessTTF Nerd Font',
-                ),
-                widget.TextBox(
-                    "◤",
-                    fontsize=55,
-                    font='TerminessTTF Nerd Font',
-                    foreground="#ffffff",
-                    padding=-5,
-                ),
-                widget.TextBox(
-                    "◢",
-                    fontsize=55,
-                    font='TerminessTTF Nerd Font',
-                    foreground="#ffffff",
-                    padding=-2,
-                ),
-                widget.Battery(
-                    format='{char} {percent:1.0%}',
-                    low_foreground="#c33027",
-                    charge_char='',
-                    discharge_char='',
-                    low_percentage=0.2,
-                    update_delay=60,
-                    fontsize=12,
-                    font='TerminessTTF Nerd Font',
-                    background="#ffffff",
-                    padding=5,
-                    foreground="#282828"
-                ),
-                widget.TextBox(
-                    "◤",
-                    font='TerminessTTF Nerd Font',
-                    fontsize=55,
-                    foreground="#ffffff",
-                    padding=-5,
-                ),
-                widget.TextBox(
-                    "◢",
-                    font='TerminessTTF Nerd Font',
-                    fontsize=55,
-                    foreground="#ffffff",
-                    padding=-2,
-                ),
-                widget.TextBox(
-                    " ",
-                    background="#ffffff",
-                    padding=0,
-                    fontsize=15,
-                ),
-                widget.Clock(
-                    format='%a %d %b | %H:%M',
-                    foreground="#282828",
-                    font="TerminessTTF Nerd Font",
-                    fontsize=12,
-                    padding=0,
-                    background="#ffffff",
-                ),
                 widget.Systray(
-                    icon_size=13,
-                    background="#ffffff",
-                ),
+                        background=colors[0],
+                        padding = 6
+                        ),        
+                widget.TextBox(
+                        "◢",
+                        fontsize=55,
+                        font='TerminessTTF Nerd Font',
+                        foreground="#ffffff",
+                        background = colors[0],
+                        padding=-2,
+                        ),
+                widget.CurrentLayout(
+                        padding=0,
+                        fontsize=12,
+                        background="#ffffff",
+                        foreground="#282828",
+                        font='TerminessTTF Nerd Font',
+                        ),
+                widget.TextBox(
+                        "◤",
+                        fontsize=55,
+                        font='TerminessTTF Nerd Font',
+                        foreground="#ffffff",
+                        padding=-5,
+                        ),
+                widget.TextBox(
+                        "◢",
+                        fontsize=55,
+                        font='TerminessTTF Nerd Font',
+                        foreground="#ffffff",
+                        padding=-2,
+                        ),
+                widget.Battery(
+                        format='{char} {percent:1.0%}',
+                        low_foreground="#c33027",
+                        charge_char='',
+                        discharge_char='',
+                        low_percentage=0.2,
+                        update_delay=60,
+                        fontsize=12,
+                        font='TerminessTTF Nerd Font',
+                        background="#ffffff",
+                        padding=5,
+                        foreground="#282828"
+                        ),
+                widget.TextBox(
+                        "◤",
+                        font='TerminessTTF Nerd Font',
+                        fontsize=55,
+                        foreground="#ffffff",
+                        padding=-5,
+                        ),
+                widget.TextBox(
+                        "◢",
+                        font='TerminessTTF Nerd Font',
+                        fontsize=55,
+                        foreground="#ffffff",
+                        padding=-2,
+                        ),
+                widget.TextBox(
+                        " ",
+                        background="#ffffff",
+                        padding=0,
+                        fontsize=15,
+                        ),
+                widget.Clock(
+                        format='%a %d %b | %H:%M',
+                        foreground="#282828",
+                        font="TerminessTTF Nerd Font",
+                        fontsize=12,
+                        padding=0,
+                        background="#ffffff",
+                        ),
+                widget.Sep(
+                        linewidth = 1,
+                        padding = 6,
+                        foreground = colors[0],
+                        background = colors[9]
+                        ),
               ]
     return widgets_list
 
@@ -554,4 +560,5 @@ def start_once():
 
 #wmname = "LG3D"
 wmname = "qtile"
+
 
